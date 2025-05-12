@@ -15,7 +15,7 @@ def select_fea(link,fea):
     df=df.filter(regex=select)
     return df
 
-df=select_fea(r"Data_feature_Discovery cohort_Breast Cancer.csv",'flen')
+df=select_fea(r"Data_feature_Discovery cohort_Breast Cancer.csv",'TMD')
 df
 
 groups = df['Class'].unique()
