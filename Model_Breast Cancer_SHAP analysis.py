@@ -359,7 +359,7 @@ plt.xlabel('1-Specificity', labelpad=30)
 plt.legend(loc=4)
 plt.show()
 ####Save model
-filename = 'Model Breast Cancer 439ft.sav'
+filename = 'Model 439ft.sav'
 pickle.dump(xgb_model, open(filename, 'wb'))
 
 #load the model from disk
