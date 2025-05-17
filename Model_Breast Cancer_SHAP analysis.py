@@ -46,7 +46,7 @@ y_train = train['Label']
 y_test= test['Label']
 y_val = Validation['Label']
 
-####HyperClassifier_default
+####HyperClassifierSearch_default
 ## Set algorithm
 models = {
     'LogisticRegression': LogisticRegression(max_iter=200),
@@ -108,7 +108,7 @@ plt.gca().spines['right'].set_visible(False)
 # Show plot
 plt.show()
 
-####Gridsearch parameter
+####GridSearchCV
 # Tunning hyperparameters for XGBClassifier
 
 model = XGBClassifier(objective='binary:logistic',random_state=1) 
@@ -338,7 +338,7 @@ print(y_pred)
 y_pred1 = xgb_model.predict_proba(X_val)
 print(y_pred1)
 
-####ROC curve
+####ROC curve plot
 plt.figure(figsize = (10,10))
 sns.set_theme(context='notebook', style='ticks', palette='deep', font='sans-serif', font_scale=1.4, color_codes=True, rc=None)
 
@@ -359,7 +359,7 @@ plt.xlabel('1-Specificity', labelpad=30)
 plt.legend(loc=4)
 plt.show()
 ####Save model
-filename = 'Model 439.sav'
+filename = 'Model Breast Cancer 439ft.sav'
 pickle.dump(xgb_model, open(filename, 'wb'))
 
 #load the model from disk
